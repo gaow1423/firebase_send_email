@@ -36,12 +36,6 @@ exports.sendMail = functions.https.onRequest((req, res) => {
             `
         };
 
-        // returning result
-        // const result = await transporter.sendMail(mailOptions)
-
-        // if (result.error) {
-        // }
-
         return transporter.sendMail(mailOptions, (erro, info) => {
             if (erro) {
                 return res.send(erro.toString());

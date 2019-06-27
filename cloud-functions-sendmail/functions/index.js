@@ -44,3 +44,41 @@ exports.sendMail = functions.https.onRequest((req, res) => {
         });
     });
 });
+
+
+// async function forEachAsync(array, callback) {
+//     for (let index = 0; index < array.length; index++) {
+//         await callback(array[index], index, array)
+//     }
+// }
+
+// const someFunction = async () => {
+
+//      let errors = []
+
+//      recipientsArray.forEach(r => {
+
+//           const result = await sendEmail()
+
+//            if (result.error) {
+//                 errors.push(result.error)
+//            } 
+
+// })
+
+// await forEachAsync(recipientsArray, async receipient => {
+
+//     const result = await sendEmail()
+
+//     if (result.error) {
+//         errors.push({ error: result.error, receipient })
+//     } 
+
+// })
+
+//      return errors.length > 0 
+// ? res.status(500).json({message:’error occurred’, errors })
+// : res.status(200).json({message:’sent’})
+
+
+// }
